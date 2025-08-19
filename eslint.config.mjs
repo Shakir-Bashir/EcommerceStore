@@ -11,7 +11,8 @@ const compat = new FlatCompat({
   baseDirectory: __dirname,
 });
 
-export default [
+// Assign config array to a variable
+const eslintConfig = [
   {
     ignores: ["lib/generated/**"],
   },
@@ -31,3 +32,6 @@ export default [
     },
   },
 ];
+
+// Export the variable as default
+export default eslintConfig;
