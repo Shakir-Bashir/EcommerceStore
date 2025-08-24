@@ -21,6 +21,7 @@ export async function createOrder() {
     if (!session) throw new Error("User is not authenticatd");
 
     const cart = await getMyCart();
+
     const userId = session?.user?.id;
     if (!userId) throw new Error("User not found");
 
