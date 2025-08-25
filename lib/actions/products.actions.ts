@@ -51,7 +51,23 @@ export async function getAllProducts({
   page: number;
   category?: string;
 }) {
+  // Query filter
+  const queryFilter =
+    query && query !== "all"
+      ? {
+          name: {
+            contains: query,
+            mode: "insensitive" as const,
+          },
+        }
+      : {};
+  // Category filter
+  const categoryFilter = category && category !== "all" ? { category } : {};
+
   const data = await prisma.product.findMany({
+    where: {
+      ...queryFilter,
+    },
     orderBy: { createdAt: "desc" },
     skip: (page - 1) * limit,
     take: limit,
