@@ -130,8 +130,8 @@ export const paymentResultSchema = z.object({
 
 // Schema for updating the user profile
 export const updateProfileSchema = z.object({
-  name: z.string().min(3, "Name must be at leaast 3 characters"),
-  email: z.string().min(3, "Email must be at leaast 3 characters"),
+  name: z.string().min(3, "Name must be at least 3 characters"),
+  email: z.string().min(3, "Email must be at least 3 characters"),
 });
 
 // Schema to update users
@@ -146,7 +146,7 @@ export const insertReviewSchema = z.object({
   description: z.string().min(3, "Description must be at least 3 characters"),
   productId: z.string().min(1, "Product is required"),
   userId: z.string().min(1, "User is required"),
-  rating: z.coerce
+  rating: z
     .number()
     .int()
     .min(1, "Rating must be at least 1")
