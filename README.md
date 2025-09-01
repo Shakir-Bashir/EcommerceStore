@@ -109,18 +109,11 @@ npm run build
 
 npm start
 
-### Export static site
-
-npm run export
-
-```
-
 ### Prisma Studio
 
 To open Prisma Studio, run the following command:
 
 ```
-
 npx prisma studio
 
 ```
@@ -132,7 +125,5 @@ To seed the database with sample data, run the following command:
 ```
 
 npx tsx ./db/seed
-
-```
 
 ```
