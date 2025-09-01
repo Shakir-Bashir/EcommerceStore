@@ -97,19 +97,19 @@ RESEND_API_KEY="####################"
 
 ```
 
-# Run in development mode
+### Run in development mode
 
 npm run dev
 
-# Build for production
+### Build for production
 
 npm run build
 
-# Run in production mode
+### Run in production mode
 
 npm start
 
-# Export static site
+### Export static site
 
 npm run export
 
